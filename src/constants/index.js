@@ -10,9 +10,6 @@ import {
     html,
     javascript,
     linkedin,
-    mongodb,
-    motion,
-    mui,
     nextjs,
     nodejs,
     pricewise,
@@ -23,10 +20,61 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    openshift,
+    veracode,
+    csharp,
+    jenkins,
+    unity,
+    photoshop,
+    illustrator,
+    animate,
+    audition,
+    substance,
+    autodeskdsmax,
+    accenture
 } from "../assets/icons";
 
-export const skills = [
+export const artSkills = [
+    {
+        imageUrl: animate,
+        name: "AdobeAnimate",
+        type: "Art",
+    },
+    {
+        imageUrl: audition,
+        name: "AdobeAudition",
+        type: "Art",
+    },
+    {
+        imageUrl: illustrator,
+        name: "AdobeIllustrator",
+        type: "Art",
+    },
+    {
+        imageUrl: photoshop,
+        name: "AdobePhotoshop",
+        type: "Art",
+    },
+    {
+        imageUrl: substance,
+        name: "AdobeSubstance",
+        type: "Art",
+    },
+    {
+        imageUrl: autodeskdsmax,
+        name: "3dsmax",
+        type: "Art",
+    },
+
+];
+
+export const developerSkills = [
+    {
+        imageUrl: csharp,
+        name: "CSharp",
+        type: "Backend",
+    },
     {
         imageUrl: css,
         name: "CSS",
@@ -35,7 +83,7 @@ export const skills = [
     {
         imageUrl: express,
         name: "Express",
-        type: "Backend",
+        type: "Frontend",
     },
     {
         imageUrl: git,
@@ -53,23 +101,13 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
+        imageUrl: jenkins,
+        name: "Jenkins",
         type: "Frontend",
     },
     {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
+        imageUrl: javascript,
+        name: "JavaScript",
         type: "Frontend",
     },
     {
@@ -81,6 +119,11 @@ export const skills = [
         imageUrl: nodejs,
         name: "Node.js",
         type: "Backend",
+    },
+    {
+        imageUrl: openshift,
+        name: "RedHatOpenshift.js",
+        type: "Frontend",
     },
     {
         imageUrl: react,
@@ -106,55 +149,27 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    {
+        imageUrl: unity,
+        name: "Unity",
+        type: "GameDevelopment",
+    },
+    {
+        imageUrl: veracode,
+        name: "Veracode",
+        type: "Frontend",
+    },
+
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
         title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        company_name: "Accenture",
+        icon: accenture,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "July 2021 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",

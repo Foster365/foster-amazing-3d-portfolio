@@ -5,11 +5,11 @@ import {Home, About, Projects, Contact} from './pages/index';
 
 const App = () => {
   return (
-    <main className = 'bg-slate-300/20 h-full'>
+    <main className = 'bg-blue-200/5 h-full'>
         <Router>
             <Navbar />
             <Routes>
-                <Route path="/" element = {<Home/>} />
+                <Route path="/foster-amazing-3d-portfolio" element = {<Home/>} />
                 <Route path="/about" element = {<About/>} />
                 <Route path="/projects" element = {<Projects/>} />
                 <Route path="/contact" element = {<Contact/>} />
