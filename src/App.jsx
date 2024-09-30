@@ -9,7 +9,7 @@ const App = () => {
         <Router>
             <Navbar />
             <Routes>
-                <Route path="/foster-amazing-3d-portfolio/home" element = {<Home/>} />
+                <Route path="/foster-amazing-3d-portfolio/" element = {<Home/>} />
                 <Route path="/about" element = {<About/>} />
                 <Route path="/projects" element = {<Projects/>} />
                 <Route path="/contact" element = {<Contact/>} />
