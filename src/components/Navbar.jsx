@@ -14,6 +14,12 @@ export const Navbar = () => {
                 <NavLink to="/projects" className={({isActive}) => isActive? 'text-blue-500':'text-black'}>
                 Projects
                 </NavLink>
+                <NavLink to="/art" className={({isActive}) => isActive? 'text-blue-500':'text-black'}>
+                My Art
+                </NavLink>
+                <NavLink to="/chrono-steam" className={({isActive}) => isActive? 'text-blue-500':'text-black'}>
+                Chrono-Steam
+                </NavLink>
             </nav>
         </header>
     )

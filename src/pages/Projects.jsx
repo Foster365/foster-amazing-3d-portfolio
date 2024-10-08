@@ -14,7 +14,7 @@ const Projects = () => {
         className="mt-5 flex flex-col gap-3 text-slate-500"
       >
         <p>
-          Software Engineer based in Argentina, specializing in technical education through hands-on learning and building applications.
+          Let's take a look to my projects! You're free to check out the Github repositories and videos specified below.
         </p>
       </div>
       <div
