@@ -3,125 +3,106 @@ import { artSkills, developerSkills, experiences } from '../constants'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CTA from '../components/CTA';
-
+import { ChronoSteamLogo } from '../assets/images';
+import { Navbar } from '../components/Navbar';
+import GridGallery from '../components/GridGallery';
+import {
+  Screenshot1,
+  Screenshot2,
+  Screenshot3,
+  Screenshot4,
+  Screenshot5,
+  Screenshot6,
+  Screenshot7,
+  Screenshot8,
+  Screenshot9,
+  Screenshot10,
+  Screenshot11,
+  Screenshot12,
+  Screenshot13,
+  Screenshot14,
+  Screenshot15,
+  Screenshot16,
+  Screenshot17,
+  Screenshot18,
+  Screenshot19,
+  Screenshot20,
+  Screenshot21,
+  Screenshot22
+} from '../assets/images/index';
+const images = [
+  Screenshot1,
+  Screenshot2,
+  Screenshot3,
+  Screenshot4,
+  Screenshot5,
+  Screenshot6,
+  Screenshot7,
+  Screenshot8,
+  Screenshot9,
+  Screenshot10,
+  Screenshot11,
+  Screenshot12,
+  Screenshot13,
+  Screenshot14,
+  Screenshot15,
+  Screenshot16,
+  Screenshot17,
+  Screenshot18,
+  Screenshot19,
+  Screenshot20,
+  Screenshot21,
+  Screenshot22
+]
 const ChronoSteam = () => {
   return (
-    <section
-      className="max-container"
-    >
-      <h1 className="head-text">Welcome to my <span className="blue-gradient_text font-semibold drop-shadow">Art </span>👋</h1>
-      <div
-        className="py-10 flex flex-col gap-3 text-slate-500"
+    <div>
+      <Navbar isDarkBackground={true} />
+      <section className='wide-container'
       >
-        <p>
-          A Fullstack and game developer, based in Argentina. I'm always willing to learn and implement new technologies and skills.
-        </p>
-      </div>
-      <div className="py-10 flex flex-col">
-        <h3 className="subhead-text">
-          My developer Skills
-        </h3>
-        <div
-          className="mt-16 flex flex-wrap gap-12"
-        >
-          {developerSkills.map((s) => (
-            <div className="block-container w-20 h-20">
-              <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  
-                  src={s.imageUrl}
-                  alt={s.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </div>
-            </div>
-          ))}
+        <div className='chrono-steam-section'>
+          <img className='' src={ChronoSteamLogo} />
+          <h1 className="head-text mt-5 flex flex-col gap-3">
+            What is Chrono-Steam?
+          </h1>
+          <p className="mt-5 flex flex-col gap-3 text-slate-500">
+            Chrono-Steam is my University final project. It's a Hack and Slash RPG Roguelike, where we'll incarnate in Chrono's and its creator, Johann Stanley, story.
+            In this game, you have to collect three parts of Johann's time machine, retrieving them to him. You'll be able to slash a lot of monsters, bosses and collect weapons and power ups.
+          </p>
+          <iframe className="mt-5 flex flex-col gap-3 inset-0 w-full z-10 transition duration-200 ease-in" width="750" height="550" src="https://www.youtube.com/embed/UCMA8XXyfbc" title="Chrono-Steam: First gameplay." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen={true}></iframe>
         </div>
-      </div>
-      <div className="py-10 flex flex-col">
-        <h3 className="subhead-text">
-          My art Skills
-        </h3>
-        <div
-          className="mt-16 flex flex-wrap gap-12"
-        >
-          {artSkills.map((s) => (
-            <div className="block-container w-20 h-20">
-              <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  
-                  src={s.imageUrl}
-                  alt={s.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="py-16">
-        <h3 className="subhead-text">Work Experience</h3>
-        <div
-          className="py-10 flex flex-col gap-3 text-slate-500"
-        >
-          <p>
-            There's a summary of my current job, where I learned and leveled up many skills, teaming up with a lot of smart people.
+        <div className='chrono-steam-section'>
+          <h1 className="head-text mt-5 flex flex-col gap-3">
+            Chrono
+          </h1>
+          <p className="mt-5 flex flex-col gap-3 text-slate-500">
+            Chrono is an experiment from Johann Stanley, a member of the Universal Association of Science. He's half human and half robot, and is missing an arm, where various weapons fit (The weapons dropped all along the game).
           </p>
         </div>
-        <div className="mt-12 flex">
-          <VerticalTimeline>
-            {
-              experiences.map((e) => (
-                <VerticalTimelineElement
-                  key={e.company_name}
-                  date={e.date}
-                  icon={
-                    <div
-                      className="flex justify-center items-center w-full h-full"
-                    >
-                      <img
-                        src={e.icon}
-                        alt={e.company_name}
-                        className="w-[60%] h-[60%] object-contain"
-                      />
-                    </div>
-                  }
-                  iconStyle={{ background: e.iconBg }}
-                  contentStyle={{
-                    borderBottom: '8px',
-                    borderStyle: 'solid',
-                    borderBottomColor: e.iconBg,
-                    boxShadow: 'none'
-                  }}
-                >
-                  <div>
-                    <h3 className="text-black text-xl font-poppins font-semibold">
-                      {e.title}
-                    </h3>
-                    <p className="text-black-500 font-medium font-base" style={{ margin: 0 }}>
-                      {e.company_name}
-                    </p>
-                  </div>
-                  <ul className="my-5 list-disc ml-5 space-y-2">
-                    {e.points.map((p, index) => (
-                      <li className="text-black-500/50 font-normal pl-1 text-sm"
-                        key={`experience-point-${index}`}
-                      >
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                </VerticalTimelineElement>
-              ))
-            }
-          </VerticalTimeline>
+
+        <div className='chrono-steam-section'>
+          <h1 className="head-text mt-5 flex flex-col gap-3">
+            The MVP
+          </h1>
+          <p className="mt-5 flex flex-col gap-3 text-slate-500">
+            Chrono-Steam's MVP consts of 1 tutorial level, 3 procedurally generated dungeons, and a final boss level. You have a large variety of weapons, all of them dropable. Each one has a certain durability level, combo attacks, and an ultimate attack. The player health regenerates over time, and once depleted you'll start over from a previous checkpoint.
+          </p>
+          <GridGallery images={images} />
         </div>
-      </div>
-      <hr className="border-slate-200" />
-      <CTA />
-    </section>
+
+        <div className='chrono-steam-section'>
+          <h1 className="head-text mt-5 flex flex-col gap-3">
+            What about future?
+          </h1>
+          <p className="mt-5 flex flex-col gap-3 text-slate-500">
+            Chrono-Steam is currently under enhancement process. I'm refactoring some code, polishing some details and modeling new characters.
+            The idea is to implement a skill system, better designed power ups, more levels, harder bosses and finishing up the comic, which consts of three parts and a final chapter.
+            So stay tuned! You're free to play the demo, and tell me what do you think I can improve, what do you like and also, why not, what you don't like.
+            All constructive feedback is welcome! c:
+          </p>
+        </div>
+      </section>
+    </div>
   )
 }
 

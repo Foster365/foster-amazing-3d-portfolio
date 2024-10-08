@@ -7,6 +7,7 @@ import Loader from '../components/Loader';
 import Alert from '../components/Alert';
 
 import useAlert from '../hooks/useAlert';
+import { Navbar } from '../components/Navbar';
 
 const Contact = () => {
 
@@ -55,8 +56,8 @@ const Contact = () => {
         type: 'success'
       })
 
-      setTimeout(function() {
-        function resetForm(){
+      setTimeout(function () {
+        function resetForm() {
 
           hideAlert(false);
           setCurrentAnimation("idle");
@@ -70,113 +71,116 @@ const Contact = () => {
       }, 3000)
       //TODO: Hide an alert
     }),
-    (err) => {
+      (err) => {
 
-      setisLoading(false)
-      setCurrentAnimation('idle')
-      console.log(err)
-      showAlert({
-        show: true,
-        text: 'I didnt receive your message!',
-        type: 'danger'
-      })
-      //TODO: Show error message
-    }
+        setisLoading(false)
+        setCurrentAnimation('idle')
+        console.log(err)
+        showAlert({
+          show: true,
+          text: 'I didnt receive your message!',
+          type: 'danger'
+        })
+        //TODO: Show error message
+      }
   }
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container h-full">
-      {alert.show && <Alert {...alert} />}
-      <div className="flex-1 min-w-[%50] flex flex-col">
-        <h1 className="head-text">Get in touch</h1>
-        <form
-          className="w-full flex flex-col gap-7 mt-14"
-          onSubmit={handleSubmit}
-        >
-          <label className="text-black-500 font-semibold">
-            Name
-            <input
-              className="input"
-              type="text"
-              name="name"
-              placeholder="John"
-              required
-              value={form.name}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className="text-black-500 font-semibold">
-            Email
-            <input
-              className="input"
-              type="email"
-              name="email"
-              placeholder="john@gmail.com"
-              required
-              value={form.email}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
-            Your Message
-            <textarea
-              name='message'
-              rows='4'
-              className='textarea'
-              placeholder='Write your thoughts here...'
-              value={form.message}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <button
-            type="submit"
-            className="btn"
-            disabled={isLoading}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
+    <div>
+      <Navbar isDarkBackground={false} />
+      <section className="relative flex lg:flex-row flex-col max-container h-full">
+        {alert.show && <Alert {...alert} />}
+        <div className="flex-1 min-w-[%50] flex flex-col">
+          <h1 className="head-text">Get in touch</h1>
+          <form
+            className="w-full flex flex-col gap-7 mt-14"
+            onSubmit={handleSubmit}
           >
-            {isLoading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      </div>
+            <label className="text-black-500 font-semibold">
+              Name
+              <input
+                className="input"
+                type="text"
+                name="name"
+                placeholder="John"
+                required
+                value={form.name}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+            </label>
+            <label className="text-black-500 font-semibold">
+              Email
+              <input
+                className="input"
+                type="email"
+                name="email"
+                placeholder="john@gmail.com"
+                required
+                value={form.email}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+            </label>
+            <label className='text-black-500 font-semibold'>
+              Your Message
+              <textarea
+                name='message'
+                rows='4'
+                className='textarea'
+                placeholder='Write your thoughts here...'
+                value={form.message}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+            </label>
+            <button
+              type="submit"
+              className="btn"
+              disabled={isLoading}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            >
+              {isLoading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
 
-      <div
-        className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]"
-      >
-        <Canvas
-          camera={{
-            position: [0, 0, 5],
-            fov: 75,
-            near: .1,
-            far: 1000
-          }}
+        <div
+          className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]"
         >
-          <directionalLight
-            intensity={2.5}
-            position={[0, 0, 1]}
-          />
-          <ambientLight
-            intensity={.5}
-          />
-          <Suspense
-            fallback={<Loader />}
+          <Canvas
+            camera={{
+              position: [0, 0, 5],
+              fov: 75,
+              near: .1,
+              far: 1000
+            }}
           >
-            <Fox
-              currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
-              rotation={[12.6, -0.6, 0]}
-              scale={[0.5, 0.5, 0.5]}
+            <directionalLight
+              intensity={2.5}
+              position={[0, 0, 1]}
             />
-          </Suspense>
-        </Canvas>
-      </div>
-    </section>
+            <ambientLight
+              intensity={.5}
+            />
+            <Suspense
+              fallback={<Loader />}
+            >
+              <Fox
+                currentAnimation={currentAnimation}
+                position={[0.5, 0.35, 0]}
+                rotation={[12.6, -0.6, 0]}
+                scale={[0.5, 0.5, 0.5]}
+              />
+            </Suspense>
+          </Canvas>
+        </div>
+      </section>
+    </div>
   )
 }
 

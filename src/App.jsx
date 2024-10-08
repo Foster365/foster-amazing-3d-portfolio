@@ -5,9 +5,8 @@ import {Home, About, Projects, Contact, ChronoSteam, Art} from './pages/index';
 
 const App = () => {
   return (
-    <main className = 'bg-blue-200/5 h-full'>
+    <main className = ''>
         <Router>
-            <Navbar />
             <Routes>
                 <Route path="/foster-amazing-3d-portfolio/" element = {<Home/>} />
                 <Route path="/about" element = {<About/>} />

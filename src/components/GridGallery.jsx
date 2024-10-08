@@ -44,9 +44,6 @@ function GridGalleryCard({ imageUrl, show }) {
       >
         <div className="absolute inset-0 z-10 flex transition duration-200 ease-in hover:opacity-0">
           <div className="absolute inset-0 bg-black opacity-40"></div>
-          <div className="mx-auto text-white z-10 self-center uppercase tracking-widest text-sm">
-            Hello World
-          </div>
         </div>
         <img src={imageUrl} alt="" />
       </div>

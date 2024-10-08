@@ -12,30 +12,35 @@ import {
     KakyoinDay2,
     StarPlatinum,
     Za_Warudo,
-    Zorathar} from '../assets/images/index.js';
-import grid from './Grid.jpg';
-const Art = () => {
-const images= [
-    Cosito,
-    DioDay1,
-    Ijtrian_Ark,
-    Johannes,
-    KakyoinDay2,
-    StarPlatinum,
-    Za_Warudo,
     Zorathar
-]
+} from '../assets/images/index.js';
+import grid from './Grid.jpg';
+import { Navbar } from '../components/Navbar.jsx';
+const Art = () => {
+    const images = [
+        Cosito,
+        DioDay1,
+        Ijtrian_Ark,
+        Johannes,
+        KakyoinDay2,
+        StarPlatinum,
+        Za_Warudo,
+        Zorathar
+    ]
     return (
-        <section
-            className="max-container"
-        >
-            <h1 className="head-text">Welcome to my <span className="blue-gradient_text font-semibold drop-shadow">Art </span>🎨</h1>
-            <GridGallery
-                images={images}
-            />
-            <hr className="border-slate-200" />
-            <CTA />
-        </section>
+        <div>
+            <Navbar isDarkBackground={false} />
+            <section
+                className="max-container"
+            >
+                <h1 className="head-text">Welcome to my <span className="blue-gradient_text font-semibold drop-shadow">Art </span>🎨</h1>
+                <GridGallery
+                    images={images}
+                />
+                <hr className="border-slate-200" />
+                <CTA />
+            </section>
+        </div>
     )
 }
 

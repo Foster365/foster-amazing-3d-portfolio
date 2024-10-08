@@ -26,6 +26,10 @@ body:has(.card[data-color="green"]:hover) {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
 
+  .wide-container {
+    @apply max-w-full mx-auto !pt-[126px] px-8 min-h-[calc(100vh-90px)];
+  }
+
   .head-text {
     @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
   }
@@ -180,4 +184,11 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+
+.chrono-steam-section{
+  /* background: #1f2221; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

@@ -9,6 +9,7 @@ import HomeInfo from '../components/HomeInfo'
 
 import sakura from '../assets/sakura.mp3'
 import { soundoff, soundon } from '../assets/icons'
+import { Navbar } from '../components/Navbar'
 
 const Home = () => {
     const audioRef = (useRef(new Audio(sakura)));
@@ -58,54 +59,57 @@ const Home = () => {
     const [planeScale, planePosition] = setPlaneModelForScreen()
 
     return (
-        <section className='w-full h-screen relative'>
-            <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-                {currentStage && <HomeInfo currentStage={currentStage} />}
-            </div>
-            <Canvas
-                className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
-                camera={{ near: 0.1, far: 1000 }}
-            >
-                <Suspense fallback={<Loader />}>
-                    <directionalLight
-                        position={[1, 1, 1]}
-                        intensity={0.5}
+        <div>
+            <Navbar isDarkBackground={false} />
+            <section className='w-full h-screen relative'>
+                <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+                    {currentStage && <HomeInfo currentStage={currentStage} />}
+                </div>
+                <Canvas
+                    className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+                    camera={{ near: 0.1, far: 1000 }}
+                >
+                    <Suspense fallback={<Loader />}>
+                        <directionalLight
+                            position={[1, 1, 1]}
+                            intensity={0.5}
+                        />
+                        <ambientLight
+                            intensity={1}
+                        />
+                        <hemisphereLight
+                            skyColor="#ffb1ba" groundColor="#000000" intensity={1.5}
+                        />
+                        <Bird />
+                        <Plane
+                            scale={planeScale}
+                            position={planePosition}
+                            isRotating={isRotating}
+                            rotation={[0, 20, 0]}
+                        />
+                        <Sky
+                            isRotating={isRotating}
+                        />
+                        <Island
+                            setCurrentStage={setCurrentStage}
+                            position={islandPosition}
+                            rotation={[0.1, 4.7077, 0]}
+                            scale={islandScale}
+                            isRotating={isRotating}
+                            setIsRotating={setIsRotating}
+                        />
+                    </Suspense>
+                </Canvas>
+                <div className="absolute bottom-2 left-2">
+                    <img
+                        src={!isPlayingMusic ? soundoff : soundon}
+                        alt="sound"
+                        className="w-10 h-10 cursor-pointer object-contain"
+                        onClick={() => setIsPlayingMusic(!isPlayingMusic)}
                     />
-                    <ambientLight
-                        intensity={1}
-                    />
-                    <hemisphereLight
-                        skyColor="#ffb1ba" groundColor="#000000" intensity={1.5}
-                    />
-                    <Bird />
-                    <Plane
-                        scale={planeScale}
-                        position={planePosition}
-                        isRotating={isRotating}
-                        rotation={[0, 20, 0]}
-                    />
-                    <Sky
-                        isRotating={isRotating}
-                    />
-                    <Island
-                        setCurrentStage={setCurrentStage}
-                        position={islandPosition}
-                        rotation={[0.1, 4.7077, 0]}
-                        scale={islandScale}
-                        isRotating={isRotating}
-                        setIsRotating={setIsRotating}
-                    />
-                </Suspense>
-            </Canvas>
-            <div className="absolute bottom-2 left-2">
-                <img
-                src={!isPlayingMusic? soundoff:soundon}
-                alt="sound"
-                className="w-10 h-10 cursor-pointer object-contain"
-                onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-                />
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
     )
 }
 
