@@ -6,10 +6,10 @@ import { a } from '@react-spring/three';
 
 import IslandScene from "../assets/3d/island.glb";
 
-const Island = ({ isRotating, 
-setIsRotating, 
-setCurrentStage,
-...props 
+const Island = ({ isRotating,
+  setIsRotating,
+  setCurrentStage,
+  ...props
 }) => {
 
   const islandRef = useRef();
@@ -146,25 +146,43 @@ setCurrentStage,
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       // Set the current stage based on the island's orientation
+      console.log("Island rotation", normalizedRotation)
       switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-          setCurrentStage(4);
+        case normalizedRotation >= 5 && normalizedRotation <= 5.15:
+          setCurrentStage(6);
           break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
-          break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
-          break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+        case normalizedRotation >= 4.1 && normalizedRotation <= 4.45:
           setCurrentStage(1);
           break;
+        case normalizedRotation >=  3 && normalizedRotation <= 3.5:
+          setCurrentStage(2);
+          break;
+        case normalizedRotation >= 1.9 && normalizedRotation <= 2.1:
+          setCurrentStage(3);
+          break;
+        case normalizedRotation >= .5 && normalizedRotation <= .75:
+          setCurrentStage(4);
+          break;
+          case normalizedRotation >= 5.65&& normalizedRotation <= 5.75:
+            setCurrentStage(5);
+            break;
         default:
           setCurrentStage(null);
       }
     }
   })
-
+  // case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+  //   setCurrentStage(4);
+  //   break;
+  // case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+  //   setCurrentStage(3);
+  //   break;
+  // case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+  //   setCurrentStage(2);
+  //   break;
+  // case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+  //   setCurrentStage(1);
+  //   break;
   //
 
   return (

@@ -10,7 +10,7 @@ const InfoBox = ({ text, link, btnText }) => (
         </p>
         <Link className="neo-brutalism-white neo-btn" to={link}>
             {btnText}
-            <img className='w-4 h-4 object-contain' src={arrow} />
+            <img className='w-6 h-6 object-contain' src={arrow} />
         </Link>
     </div>
 )
@@ -22,12 +22,12 @@ const renderContent = {
         >
             Hi! I'm <span className='font-semibold'>Bárbara</span>👋
             <br />
-            A Ssr Fullstack Developer and Game Developer from Argentina 🇦🇷
+            A Ssr Fullstack Developer and Game Developer from Argentina. 🇦🇷
         </h1>
     ),
     2: (
         <InfoBox
-            text="I've worked with many companies, and picked up many skils along the way"
+            text="I'm working since 2021 as a Fullstack developer, you can check out my work experience here."
             link="/about"
             btnText="Learn more"
         />
@@ -41,9 +41,23 @@ const renderContent = {
     ),
     4: (
         <InfoBox
-            text="Need a project done or looking for a dev? I'm just a few keystrokes away"
+            text="You can take a look at my art."
+            link="/art"
+            btnText="My portfolio"
+        />
+    ),
+    5: (
+        <InfoBox
+            text="And there's an overview of Chrono-Steam, my most beloved project."
+            link="/chrono-steam"
+            btnText="See more"
+        />
+    ),
+    6: (
+        <InfoBox
+            text="Have a project in mind?"
             link="/contact"
-            btnText="Let's talk "
+            btnText="Let's talk"
         />
     ),
 }

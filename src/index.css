@@ -29,7 +29,9 @@ body:has(.card[data-color="green"]:hover) {
   .wide-container {
     @apply max-w-full mx-auto !pt-[126px] px-8 min-h-[calc(100vh-90px)];
   }
-
+  .footer-chrono-steam{
+    @apply max-w-5xl mx-auto my-auto;
+  }
   .head-text {
     @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
   }
@@ -67,7 +69,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-12;
   }
 
   .neo-btn {
@@ -191,4 +193,8 @@ body:has(.card[data-color="green"]:hover) {
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.chrono-images-section{
+  background-color: #0a1647;
 }

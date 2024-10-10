@@ -1,8 +1,3 @@
-
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
 import logo from './logo.svg'
 
 
@@ -18,6 +13,10 @@ import Zorathar from './Zorathar.jpg';
 
 //chrono steam images
 import ChronoSteamLogo from './Complete_Chrono-Steam_Logo.png';
+import Chrono_1 from './Chrono_1.png';
+import Chrono_2 from './Chrono_2.png';
+import Chrono_3 from './Chrono_3.png';
+import Chrono_4 from './Chrono_4.png';
 import Screenshot1 from './Screenshot_1.png';
 import Screenshot2 from './Screenshot_2.png';
 import Screenshot3 from './Screenshot_3.png';
@@ -42,10 +41,6 @@ import Screenshot21 from './Screenshot_21.png';
 import Screenshot22 from './Screenshot_22.png';
 
 export {
-    meta,
-    shopify,
-    starbucks,
-    tesla,
     logo,
     Cosito,
     DioDay1,
@@ -56,6 +51,10 @@ export {
     Za_Warudo,
     Zorathar,
     ChronoSteamLogo,
+    Chrono_1,
+    Chrono_2,
+    Chrono_3,
+    Chrono_4,
     Screenshot1,
     Screenshot2,
     Screenshot3,

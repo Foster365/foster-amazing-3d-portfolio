@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { Chrono_1, Chrono_2, Chrono_3, Chrono_4 } from "../assets/images";
 import {
     car,
     contact,
@@ -34,6 +34,31 @@ import {
     autodeskdsmax,
     accenture
 } from "../assets/icons";
+
+import {
+    Cosito,
+    DioDay1,
+    Ijtrian_Ark,
+    Johannes,
+    KakyoinDay2,
+    StarPlatinum,
+    Za_Warudo,
+    Zorathar,
+    Screenshot1,
+    Screenshot2,
+    Screenshot6,
+    Screenshot7,
+    Screenshot8,
+    Screenshot9,
+    Screenshot10,
+    Screenshot11,
+    Screenshot12,
+    Screenshot13,
+    Screenshot14,
+    Screenshot17,
+    Screenshot19,
+    Screenshot21
+  } from '../assets/images/index';
 
 export const artSkills = [
     {
@@ -218,26 +243,40 @@ export const projects = [
         name: 'Multiplayer Game in Unity',
         description: 'This is a game, between 2 or more players, where the main goal is to get to the end of the map, and touch a cyan ball to win. The first player stands as a host, and will not play or interact with the other players. This game was built with Unity and Photon Pun, and implements a Hybrid structure, between Full Authority and Non Authority Multiplayer structure. This game also implements a Chat and Voice features, using Photon Chat and Photon Voice, respectively. You can check out the code and play a build stored in the "build" branch. You should match the same room name for all players, in order for starting the game correctly.',
         link: 'https://github.com/Fos7er365/Final-VJRED',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
     }
 ];
+
+export const portfolioImages = [
+    Cosito,
+    DioDay1,
+    Ijtrian_Ark,
+    Johannes,
+    KakyoinDay2,
+    StarPlatinum,
+    Za_Warudo,
+    Zorathar
+]
+
+export const chronoImages = [
+    Chrono_2,
+    Chrono_3,
+    Chrono_1,
+    Chrono_4
+]
+
+ export const chronoSteamMVPImages = [
+    Screenshot1,
+    Screenshot2,
+    Screenshot6,
+    Screenshot7,
+    Screenshot8,
+    Screenshot9,
+    Screenshot10,
+    Screenshot11,
+    Screenshot12,
+    Screenshot13,
+    Screenshot14,
+    Screenshot17,
+    Screenshot19,
+    Screenshot21,
+  ]

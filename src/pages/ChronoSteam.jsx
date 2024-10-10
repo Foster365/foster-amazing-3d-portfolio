@@ -6,54 +6,11 @@ import CTA from '../components/CTA';
 import { ChronoSteamLogo } from '../assets/images';
 import { Navbar } from '../components/Navbar';
 import GridGallery from '../components/GridGallery';
-import {
-  Screenshot1,
-  Screenshot2,
-  Screenshot3,
-  Screenshot4,
-  Screenshot5,
-  Screenshot6,
-  Screenshot7,
-  Screenshot8,
-  Screenshot9,
-  Screenshot10,
-  Screenshot11,
-  Screenshot12,
-  Screenshot13,
-  Screenshot14,
-  Screenshot15,
-  Screenshot16,
-  Screenshot17,
-  Screenshot18,
-  Screenshot19,
-  Screenshot20,
-  Screenshot21,
-  Screenshot22
-} from '../assets/images/index';
-const images = [
-  Screenshot1,
-  Screenshot2,
-  Screenshot3,
-  Screenshot4,
-  Screenshot5,
-  Screenshot6,
-  Screenshot7,
-  Screenshot8,
-  Screenshot9,
-  Screenshot10,
-  Screenshot11,
-  Screenshot12,
-  Screenshot13,
-  Screenshot14,
-  Screenshot15,
-  Screenshot16,
-  Screenshot17,
-  Screenshot18,
-  Screenshot19,
-  Screenshot20,
-  Screenshot21,
-  Screenshot22
-]
+import { chronoImages, chronoSteamMVPImages } from '../constants';
+import VerticalGallery from '../components/VerticalGallery';
+import { Link } from 'react-router-dom'
+import { arrow } from '../assets/icons';
+
 const ChronoSteam = () => {
   return (
     <div>
@@ -73,26 +30,29 @@ const ChronoSteam = () => {
         </div>
         <div className='chrono-steam-section'>
           <h1 className="head-text mt-5 flex flex-col gap-3">
-            Chrono
+            Chrono - The protagonist of Chrono-Steam
           </h1>
+          {console.log("Chrono imgs: ", chronoImages)}
+          <VerticalGallery images={chronoImages} />
           <p className="mt-5 flex flex-col gap-3 text-slate-500">
             Chrono is an experiment from Johann Stanley, a member of the Universal Association of Science. He's half human and half robot, and is missing an arm, where various weapons fit (The weapons dropped all along the game).
           </p>
+          <iframe className="mt-5 flex flex-col gap-3 inset-0 w-full z-10 transition duration-200 ease-in" width="750" height="550" src="https://www.youtube.com/embed/I3ptfd7eljA" title="Chrono: The hero of Chrono-Steam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className='chrono-steam-section'>
           <h1 className="head-text mt-5 flex flex-col gap-3">
-            The MVP
+            The Project
           </h1>
           <p className="mt-5 flex flex-col gap-3 text-slate-500">
-            Chrono-Steam's MVP consts of 1 tutorial level, 3 procedurally generated dungeons, and a final boss level. You have a large variety of weapons, all of them dropable. Each one has a certain durability level, combo attacks, and an ultimate attack. The player health regenerates over time, and once depleted you'll start over from a previous checkpoint.
+            Chrono-Steam consts of 1 tutorial level, 3 procedurally generated dungeons, and a final boss level. You have a large variety of weapons, all of them dropable. Each one has a certain durability level, combo attacks, and an ultimate attack. The player health regenerates over time, and once depleted you'll start over from a previous checkpoint.
           </p>
-          <GridGallery images={images} />
+          <GridGallery images={chronoSteamMVPImages} />
         </div>
 
         <div className='chrono-steam-section'>
           <h1 className="head-text mt-5 flex flex-col gap-3">
-            What about future?
+            What about the future?
           </h1>
           <p className="mt-5 flex flex-col gap-3 text-slate-500">
             Chrono-Steam is currently under enhancement process. I'm refactoring some code, polishing some details and modeling new characters.
@@ -101,7 +61,30 @@ const ChronoSteam = () => {
             All constructive feedback is welcome! c:
           </p>
         </div>
+
+        <div className='chrono-steam-section'>
+          <h1 className="head-text mt-5 flex flex-col gap-3">
+            Wanna play?
+          </h1>
+          <p className="mt-5 flex flex-col gap-3 text-slate-500">
+            You can play the demo in the link below,the game is the file under the name "Final Build".</p>
+            <p className="mb-5 flex flex-col gap-3 text-slate-500">
+            Thanks for playing! have a great day :)</p>
+          
+          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mt-2 ">
+                  <Link
+                    to={'https://drive.google.com/drive/folders/16hMcUwuQdKs5gyw4rbvu_BXyvHUP5a52'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-white"
+                  >
+                    Play Game
+                  </Link>
+                </button>
+        </div>
       </section>
+      <div className='footer-chrono-steam'>
+      <CTA /></div>
     </div>
   )
 }
