@@ -2,6 +2,7 @@ import { render } from '@react-three/fiber'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { arrow } from '../assets/icons';
+import { socialLinks } from '../constants';
 
 const InfoBox = ({ text, link, btnText }) => (
     <div className='info-box'>
@@ -17,24 +18,38 @@ const InfoBox = ({ text, link, btnText }) => (
 
 const renderContent = {
     1: (
-        <h1
-            className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'
-        >
-            Hi! I'm <span className='font-semibold'>Bárbara</span>👋
-            <br />
-            A Ssr Fullstack Developer and Game Developer from Argentina. 🇦🇷
-        </h1>
+        <div className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8">
+            <h1
+                className=' text-white mx-5'
+            >
+                Hi! I'm <span className='font-semibold'>Bárbara</span>👋
+                <br />
+                A Ssr Fullstack Developer and Game Developer from Argentina. 🇦🇷
+            </h1>
+            <div className="flex justify-center grid-cols-12 pt-4 gap-2">
+            {socialLinks && socialLinks.map((socialLink) => {
+                return(
+                    <button className="rounded-full transition duration-300 ease-in-out transform hover:bg-slate-600 hover:scale-20 w-7 h-7 ">
+                    <Link
+                        to={socialLink.link}>
+                        <img src={socialLink.iconUrl} />
+                    </Link>
+                    </button>
+                    )
+            })}
+            </div>
+        </div>
     ),
     2: (
         <InfoBox
-            text="I'm working since 2021 as a Fullstack developer, you can check out my work experience here."
+            text="I'm working since 2021 as a Fullstack Developer, you can check out my work experience here."
             link="/about"
             btnText="Learn more"
         />
     ),
     3: (
         <InfoBox
-            text="Led multiple projects to success over the years. Curious about the impact?"
+            text="You can check out my projects i've done until now."
             link="/projects"
             btnText="Visit my portfolio"
         />
@@ -43,7 +58,7 @@ const renderContent = {
         <InfoBox
             text="You can take a look at my art."
             link="/art"
-            btnText="My portfolio"
+            btnText="My art"
         />
     ),
     5: (
@@ -55,7 +70,7 @@ const renderContent = {
     ),
     6: (
         <InfoBox
-            text="Have a project in mind?"
+            text="Have a project in mind? Let's bring it to light together!"
             link="/contact"
             btnText="Let's talk"
         />
