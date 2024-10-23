@@ -26,18 +26,6 @@ const renderContent = {
                 <br />
                 A Ssr Fullstack Developer and Game Developer from Argentina. 🇦🇷
             </h1>
-            <div className="flex justify-center grid-cols-12 pt-4 gap-2">
-            {socialLinks && socialLinks.map((socialLink) => {
-                return(
-                    <button className="rounded-full transition duration-300 ease-in-out transform hover:bg-slate-600 hover:scale-20 w-7 h-7 ">
-                    <Link
-                        to={socialLink.link}>
-                        <img src={socialLink.iconUrl} />
-                    </Link>
-                    </button>
-                    )
-            })}
-            </div>
         </div>
     ),
     2: (
@@ -49,14 +37,14 @@ const renderContent = {
     ),
     3: (
         <InfoBox
-            text="You can check out my projects i've done until now."
+            text="Check out my projects i've done until now."
             link="/projects"
             btnText="Visit my portfolio"
         />
     ),
     4: (
         <InfoBox
-            text="You can take a look at my art."
+            text="You can also take a look at my art."
             link="/art"
             btnText="My art"
         />

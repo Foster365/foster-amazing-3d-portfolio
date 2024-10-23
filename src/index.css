@@ -181,6 +181,16 @@ body:has(.card[data-color="green"]:hover) {
     0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
 }
 
+/* Neo Brutalism */
+.neo-brutalism-gray {
+  background: #adccfa;
+  position: relative;
+  border-radius: 10px;
+  border: #2cc6f1;
+  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+}
+
 .neo-brutalism-white {
   background: #fff;
   border: #fff;

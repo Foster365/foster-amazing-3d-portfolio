@@ -38,7 +38,7 @@ import audition from './adobe-audition.svg'
 import substance from './adobe-substance.svg'
 import autodeskdsmax from './3dsmax.svg'
 import accenture from './accenture.svg'
-import behance from './behance-logo.svg'
+import behance from './behance.svg'
 
 
 export {

@@ -1,9 +1,10 @@
 import React from 'react'
-import { artSkills, developerSkills, experiences } from '../constants'
+import { artSkills, developerSkills, experiences, socialLinks } from '../constants'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CTA from '../components/CTA';
 import { Navbar } from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -19,6 +20,19 @@ const About = () => {
           <p>
             A Fullstack and game developer, based in Argentina. I'm always willing to learn and implement new technologies and skills.
           </p>
+          
+          <div className="neo-brutalism-gray flex justify-center mx-auto grid-cols-4 pt-2 pb-2 px-2 gap-2 transition ease-in duration-300 transform hover:-translate-x-10">
+            {socialLinks && socialLinks.map((socialLink) => {
+                return(
+                    <button className="mx-auto justify-center rounded transform hover:bg-slate-200 hover:scale-20 w-7 h-7 items-center-">
+                    <Link
+                        to={socialLink.link}>
+                        <img src={socialLink.iconUrl} />
+                    </Link>
+                    </button>
+                    )
+            })}
+            </div>
         </div>
         <div className="py-10 flex flex-col">
           <h3 className="subhead-text">
