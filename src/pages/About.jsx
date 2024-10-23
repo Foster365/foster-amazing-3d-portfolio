@@ -21,7 +21,7 @@ const About = () => {
             A Fullstack and game developer, based in Argentina. I'm always willing to learn and implement new technologies and skills.
           </p>
           
-          <div className="neo-brutalism-gray flex justify-center mx-auto grid-cols-4 pt-2 pb-2 px-2 gap-2 transition ease-in duration-300 transform hover:-translate-x-10">
+          <div className="neo-brutalism-gray flex justify-center mx-auto grid-cols-4 pt-2 pb-2 px-2 gap-2">
             {socialLinks && socialLinks.map((socialLink) => {
                 return(
                     <button className="mx-auto justify-center rounded transform hover:bg-slate-200 hover:scale-20 w-7 h-7 items-center-">
