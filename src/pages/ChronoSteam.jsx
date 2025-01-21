@@ -67,13 +67,13 @@ const ChronoSteam = () => {
             Wanna play?
           </h1>
           <p className="mt-5 flex flex-col gap-3 text-slate-500">
-            You can play the demo in the link below,the game is the file under the name "Final Build".</p>
+            You can play the demo in the link below, follow the instructions in itch io page and enjoy!".</p>
             <p className="mb-5 flex flex-col gap-3 text-slate-500">
             Thanks for playing! have a great day :)</p>
           
           <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mt-2 ">
                   <Link
-                    to={'https://drive.google.com/drive/folders/16hMcUwuQdKs5gyw4rbvu_BXyvHUP5a52'}
+                    to={'https://foster365.itch.io/chrono-steam'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-white"

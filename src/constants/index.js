@@ -238,14 +238,14 @@ export const projects = [
         theme: 'btn-back-green',
         name: 'AI Project in Unity.',
         description: 'This is an AI project, using Unity and C#. It consists in two troops, with a leader for each one, both troops will patrol and search for each other until finding its enemy. After this, they will start to attack each other, until the leader of one troop dies.This project combines multiple structures such as FSM, Behaviour Trees, Steering Behaviours, Flocking, Line of Sight and Pathfinding, using AStar with Vectors. You can check out the code and play a build stored in the "build" branch.',
-        link: 'https://github.com/Foster365/Foster_Final_IA/tree/build',
+        link: 'https://foster365.itch.io/ai-final-exam',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
         name: 'Multiplayer Game in Unity',
         description: 'This is a game, between 2 or more players, where the main goal is to get to the end of the map, and touch a cyan ball to win. The first player stands as a host, and will not play or interact with the other players. This game was built with Unity and Photon Pun, and implements a Hybrid structure, between Full Authority and Non Authority Multiplayer structure. This game also implements a Chat and Voice features, using Photon Chat and Photon Voice, respectively. You can check out the code and play a build stored in the "build" branch. You should match the same room name for all players, in order for starting the game correctly.',
-        link: 'https://github.com/Fos7er365/Final-VJRED/tree/build',
+        link: 'https://foster365.itch.io/multiplayer-game-using-photon-pun',
     }
 ];
 
