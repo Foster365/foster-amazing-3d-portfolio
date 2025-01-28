@@ -246,7 +246,14 @@ export const projects = [
         name: 'Multiplayer Game in Unity',
         description: 'This is a game, between 2 or more players, where the main goal is to get to the end of the map, and touch a cyan ball to win. The first player stands as a host, and will not play or interact with the other players. This game was built with Unity and Photon Pun, and implements a Hybrid structure, between Full Authority and Non Authority Multiplayer structure. This game also implements a Chat and Voice features, using Photon Chat and Photon Voice, respectively. You can check out the code and play a build stored in the "build" branch. You should match the same room name for all players, in order for starting the game correctly.',
         link: 'https://foster365.itch.io/multiplayer-game-using-photon-pun',
-    }
+    },
+    {
+        iconUrl: pricewise,
+        theme: 'btn-back-red',
+        name: 'Sonic Endless Runner',
+        description: 'This is a web game made with Kaplay and vanilla Javascript.',
+        link: 'https://foster365.itch.io/sonic-endless-runner',
+    },
 ];
 
 export const portfolioImages = [
